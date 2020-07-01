@@ -1,0 +1,21 @@
+
+<mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Grocery List</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      
+        <table class="example-full-width" cellspacing="0" *ngIf="arrGrocery">
+          <tr *ngFor="let grocery of arrGrocery"> 
+              <mat-card>
+                 <mat-card-title> {{grocery.item}}</mat-card-title>
+                 <mat-card-content>{{grocery.quantity}}</mat-card-content>
+                 <button mat-button (click)="editItem()">Edit</button> 
+              </mat-card>
+          </tr>  
+        </table>
+      
+     
+    </mat-card-content>
+   
+  </mat-card>
